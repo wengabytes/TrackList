@@ -6,7 +6,7 @@ This Android application fetches tracks from the iTunes Search API. A list is th
   2. Genre
   3. Price, and
   4. Artwork*
-  
+  
 The user may then select a track from the list which will open a new screen displaying the aforementioned fields alongside the track's long description.
 
 The fetched tracks from iTunes Search API are then saved to a local database for future use.
