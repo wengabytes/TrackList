@@ -35,8 +35,5 @@ The fetched tracks from iTunes Search API are then saved to a local database for
   2. Retrofit: used for creating HTTP calls to iTunes Search API [https://square.github.io/retrofit/]
   3. Gson: used to deserialized results from iTunes Search API. [https://github.com/google/gson]
   4. Glide: used to load Artwork* images from a URL [https://github.com/bumptech/glide]
-  
-  
-  
-  
- *The largest available size for artworks is 100x100. Artworks will appear pixelated when rendered on almost all devices.
+  
+  *The largest available size for artworks is 100x100. Artworks will appear pixelated when rendered on almost all devices.
