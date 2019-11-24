@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TrackList</string>
+
+    <!-- Network Error Messages -->
+    <string name="errmsg_no_internet_connectivity">Your device appears to have no internet connection. Please make sure you are connected to a network then try again.</string>
+    <string name="errmsg_ssl_handshake">Cannot verify the security certificate for this connection.</string>
+    <string name="errmsg_unexpected">Encountered an unexpected error</string>
+    <string name="errmsg_unavailable">Sorry, iTunes is not available at this time. Please try again later.</string>
+    <string name="errmsg_timeout">Sorry, we are is experiencing some momentary delays.</string>
+
+    <string name="format_errmsg_swipe">%1$s\n\n%2$s</string>
+    <string name="swipe_downwards_to_retry">Swipe Downwards to Retry.</string>
+
+    <!-- Dialog -->
+    <string name="title_error_dialog">Error</string>
+    <string name="button_ok">OK</string>
+
+    <!-- List -->
+    <string name="errmsg_list_empty">No records found.</string>
+    <string name="title_track_list">Track List</string>
+
+    <!-- Details -->
+    <string name="title_track_details">Track Details</string>
+
+    <string name="format_as_of">Data as of: %1$s</string>
+</resources>

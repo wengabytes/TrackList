@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/default_card_corner_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/element_spacing">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageview_track_artwork"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="@dimen/element_spacing"
+            android:layout_marginLeft="@dimen/element_spacing"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/textview_track_name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textview_track_name"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/logo_placeholder_art" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_track_name"
+            style="@style/TextAppearance.AppCompat.SearchResult.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/element_spacing"
+            android:layout_marginRight="@dimen/element_spacing"
+            app:layout_constraintBottom_toTopOf="@id/textview_genre"
+            app:layout_constraintEnd_toStartOf="@id/imageview_track_artwork"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/imageview_track_artwork"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Start Wars Episode IV: A New Hope" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_genre"
+            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/textview_price"
+            app:layout_constraintLeft_toLeftOf="@id/textview_track_name"
+            app:layout_constraintRight_toRightOf="@id/textview_track_name"
+            app:layout_constraintTop_toBottomOf="@id/textview_track_name"
+            tools:text="Scifi, Adventure" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_price"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/textview_track_name"
+            app:layout_constraintRight_toRightOf="@id/textview_track_name"
+            app:layout_constraintTop_toBottomOf="@id/textview_genre"
+            tools:text="USD 14.99" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

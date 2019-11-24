@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/element_spacing_twice" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/element_spacing_twice" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageview_track_artwork"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/element_spacing_twice"
+            app:layout_constraintBottom_toTopOf="@id/textview_track_name"
+            app:layout_constraintDimensionRatio="H, 1:1"
+            app:layout_constraintEnd_toEndOf="@id/guide_end"
+            app:layout_constraintLeft_toLeftOf="@id/guide_start"
+            app:layout_constraintRight_toRightOf="@id/guide_end"
+            app:layout_constraintStart_toStartOf="@id/guide_start"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/logo_placeholder_art" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_track_name"
+            style="@style/TextAppearance.AppCompat.SearchResult.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/element_spacing_twice"
+            android:layout_marginEnd="@dimen/element_spacing_half"
+            android:layout_marginRight="@dimen/element_spacing_half"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/guide_end"
+            app:layout_constraintLeft_toLeftOf="@id/guide_start"
+            app:layout_constraintRight_toRightOf="@id/guide_end"
+            app:layout_constraintStart_toStartOf="@id/guide_start"
+            app:layout_constraintTop_toBottomOf="@id/imageview_track_artwork"
+            tools:text="Star Trek VI: THe Undiscovered Country (Director's Cut)" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_genre"
+            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/element_spacing"
+            android:layout_marginEnd="@dimen/element_spacing_half"
+            android:layout_marginRight="@dimen/element_spacing_half"
+            app:layout_constraintEnd_toStartOf="@id/textview_price"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="@id/guide_start"
+            app:layout_constraintRight_toLeftOf="@id/textview_price"
+            app:layout_constraintStart_toStartOf="@id/guide_start"
+            app:layout_constraintTop_toBottomOf="@id/textview_track_name"
+            tools:text="Action, Adventure, Sci-fi" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_price"
+            style="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/element_spacing_half"
+            android:layout_marginLeft="@dimen/element_spacing_half"
+            android:layout_marginTop="@dimen/element_spacing"
+            app:layout_constraintEnd_toEndOf="@id/guide_end"
+            app:layout_constraintLeft_toRightOf="@id/textview_genre"
+            app:layout_constraintRight_toRightOf="@id/guide_end"
+            app:layout_constraintStart_toEndOf="@id/textview_genre"
+            app:layout_constraintTop_toBottomOf="@id/textview_track_name"
+            tools:text="USD 400.00" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="textview_genre,textview_price" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_long_desc"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/element_spacing_twice"
+            android:layout_marginBottom="@dimen/element_spacing_twice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/guide_end"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="@id/guide_start"
+            app:layout_constraintRight_toRightOf="@id/guide_end"
+            app:layout_constraintStart_toStartOf="@id/guide_start"
+            app:layout_constraintTop_toBottomOf="@id/barrier_genre"
+            app:layout_constraintVertical_bias="1.0"
+            tools:text="Luke Skywalker begins a journey that will change the galaxy in Star Wars: Episode IV -  A New Hope. Nineteen years after the formation of the Empire, Luke is thrust into the struggle of the Rebel Alliance when he meets Obi-Wan Kenobi, who has lived for years in seclusion on the desert planet of Tatooine. Obi-Wan begins Luke’s Jedi training as Luke joins him on a daring mission to rescue the beautiful Rebel leader Princess Leia from the clutches of Darth Vader and the evil Empire." />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
